@@ -1,0 +1,67 @@
+Banco de dados são como um navio
+
+As tabelas são conteiners
+
+Os itens dentro dos conteiners são os registros
+
+Os registros são compostos por campos
+
+create database nome; = cria um banco de dados
+
+create table nome (); = Cria uma tabela, os registros devem ser colocados entre os ()
+
+Os Tipos Primitivos do mysql são:
+
+Numérico
+
+Data/Tempo
+
+Literal
+
+Espacial
+
+Cada um deles tem subdivisões:
+
+Numérico:
+
+	Inteiro:
+		
+		TinyInt, SmallInt, Int, 		MediumInt, BigInt		
+	
+	Real:
+		
+		Decimal, Float, Double, Real
+	
+	Lógico:
+	
+		Bit, Boolean
+		
+Data/Tempo:
+	
+	Date, DateTime, TimeStamp, Time, Year
+
+Literal:
+
+	Caractere:
+		
+		Char, VarChar
+
+	Texto:
+	
+		TinyText, Text, MediumText, 			LongText
+	
+	Binário:
+	
+		TinyBlod, Blod, MediumBlod, 			LongBlod
+	
+	Coleção:
+	
+		Enum, set
+
+Espacial:
+	
+	Geometry, Point, Polygon, MultiPolygon
+	
+Dentro dos campos da tabela, você precisa colocar da seguinte maneira:
+
+	name tipo_primitivo(),

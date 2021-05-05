@@ -1,0 +1,33 @@
+Por volta de 1979, 2 progamadores da suécia (chamados Michael 
+Widenius e David Axmark) resolveram criar um protocolo de banco de 
+dados baseado no modelo relacional, com o objetivo inicial de ser 
+gratuito, dessa forma surgiu o MySql, o Mysql é um projeto 
+open-source
+
+Em 2007 o projeto do MySql foi comprado pela sun microsystems, dessa 
+forma o MySql ainda continuou gratuito porém foi criado uma versão 
+paga do mesmo, em 2009 a sun foi comprada pela ORACLE.
+
+O MySql além de seguir regras de um banco de dados padronizado, tem 
+varios recursos a mais como:
+
+DDL = Linguagem de Definição
+
+DML = Linguagem de Manipulação
+
+DQL = Linguagem de Solicitações
+
+DCL = Linguagem de Controle
+
+DTL = Linguagem de Transações
+
+Transações são qualquer solicitação feita a um banco de dados, ele 
+ira de atender com o padrão do DICA:
+
+D = Durabilidade
+
+I = Isolamento
+
+C = Consistência
+
+A = Atomicidade
