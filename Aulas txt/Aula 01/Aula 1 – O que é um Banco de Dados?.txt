@@ -1,0 +1,38 @@
+Antigamente a forma mais comum de armazenar dados era em papel
+
+O papel com a ficha é chamado de Registro
+
+A pasta onde o papel é colocado é chamado de Tabelas
+
+Já o lugar onde guarda as tabelas é chamada de Arquivos
+
+(Dentro da area de TI)
+
+As primeiras formas de armazenamento na TI, eram chamadas de Arquivos Sequenciais
+pois todos os arquivos de Registro eram armazenados em uma sequencia unica.
+
+Depois foi criado a forma de arquivos de acessos diretos, cada arquivo recebia
+uma chave, então era so procurar a chave correspondente, dessa forma encontrando
+o arquivo.
+
+Um banco de dados é formado por 4 estruturas:
+
+	Base de dados = São os dados, a estrutura do banco de dados está na base
+	de dados
+
+	Sistema Gerenciador = Dentro da estrutura do banco de dados, precisamos
+	de um sistema gerenciador para gerenciar ...
+
+	Linguagem de Exploração = Ao inves de aprender milhares de linguagens
+	de progamação, nessecitaria de apenas uma, uma linguagem de Exploração
+	para manipular o banco de dados
+
+	Progama Adicionais = Como, otimizador de dados, pesquisa, tudo de extra
+	o banco de dados irar conter.
+
+O modelo mais utilizado ate hoje é o modelo relacional:
+
+	O modelo relacional é um modelo de organização do banco de dados que
+	facilita o transporte das informações, dessa forma você poderá verificar
+	qual o impacto que determinada ação teve em outras e relacionar as ações
+	para interligar diferentes funções.
