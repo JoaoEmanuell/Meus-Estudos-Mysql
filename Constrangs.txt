@@ -1,0 +1,10 @@
+NOT NULL = não pode ser em branco
+	
+DEFAULT = caso o dado não seja informado será considerado como o 
+paramentro após a ''
+
+AUTO_INCREMENT = Auto incrementa um campo
+
+UNIQUE = Define que o nome que ser unico
+
+UNSIGNED = Define que o valor não pode ser negativo, dessa forma caso sejá inserido um valor negativo ele converte para positivo

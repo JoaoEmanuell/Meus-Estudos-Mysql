@@ -85,3 +85,42 @@ Ou de forma simplificada:
 	insert into tabela values:
 	('Dado1', 'Dado2'),
 	('Dado1', 'Dado2');
+
+=================================================
+
+ALTER TABLE tabela = altera a estrutura da tabela, ele por sua vez tem 
+que ser complementado com alguns comandos:
+
+	ADD COLUMN nome tipo_primitivo = Cria uma coluna (no mysql os 
+	campos são chamados de colunas) com o nome e o tipo primitivo, 
+	por padrão a coluna será criada no fim da tabela.
+	
+	DROP COLUMN nome = Apaga uma coluna.
+
+	ADD COLUMN nome tipo_primitivo AFTER nome = Cria uma coluna, com 
+	o nome, tipo primitivo e apos a coluna informado no nome final. 
+
+	ADD COLUMN nome tipo_primitivo FIRST = Cria uma coluna, com o 
+	nome, tipo primitivo e sendo a primeira coluna da tabela.
+
+	MODIFY COLUMN nome novo_tipo_primitivo = Altera o tipo primitivo 
+	mas também pode alterar a constrang da coluna da coluna 
+	desejada.
+	
+	CHANGE COLUMN nome_coluna_antiga nome_nova_coluna tipo primtivo 
+	= altera o nome da coluna, se ela tiver constrangs ou defaults 
+	eles serão perdidos, mas se você colocar eles apos o tipo 
+	primitivo, eles serão mantidos.
+
+	RENAME TO nome = Renomeia a tabela inteira
+
+	ADD PRIMARY KEY(campo) = O campo que foi dito se torna uma chave 
+	primaria
+
+DESC tabela = Descreve a estrutura da tabela.
+
+CREATE TABLE IF NOT EXISTS nome () = Cria uma tabela se ela não existir
+
+DROP TABLE IF EXISTS nome = Apaga a tabela com o nome informado
+
+=================================================
