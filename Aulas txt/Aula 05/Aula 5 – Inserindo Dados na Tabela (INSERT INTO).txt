@@ -1,2 +1,62 @@
-Todo comando que segue a regra do SQL é chamado de DDL, que siginifica 
-Data Defenition Language (Linguagem de definição de dados)
+Todo comando que segue a regra do de criação é chamado de DDL, que siginifica 
+Data Defenition Language (Linguagem de definição de dados):
+
+	CREATE DATABASE
+	CREATE TABLE
+
+Para inserir dados em uma tabela é bastante simples.
+
+Lembre-se sempre de verificar os tipos primitivos da tabela, depois 
+disso você pode fazer da segunite maneira:
+
+insert into nome_da_tabela
+(registro, registro1)
+values
+('Dado', 'Dado1');
+
+Ou caso os dados estejam na mesma ordem dos campos, você não precisa informar os campos:
+
+INSERT INTO nome_da_tabela VALUES
+('Dado', 'Dado1');
+
+Dessa forma ele ira inserir os dados dentro da tabela.
+
+Caso o tipo primitivo de um dado seja do tipo DATE, você coloca a data 
+em outra ordem:
+
+'ano-mês-dia'
+
+'1995-11-05'
+
+Se colocar na ordem normal ele não irar aceitar o dado.
+
+Tudo que está entre '' no campo values, são considerados dados pelo 
+banco de dados, caso um campo tenha um valor padrão configurado nele, 
+você pode colocar o comando DEFAULT, dessa forma ele ira acessar o valor 
+padrão dele, é util caso queira colocar o campo ID, mas não é 
+obrigatorio uma vez que o campo ID tem a configuração de auto gerar 
+dados.
+
+select * from tabela = Selecione tudo ( * ) para nome da tabela, ira 
+exibir tudo que está dentro da tabela.
+
+Para adicionar varios registros em uma tabela pode se usar:
+
+insert into tabela
+(campo, campo1)
+values
+('dados', 'dados2'),
+('dados', 'dados2');
+
+Ou de forma simplificada:
+
+	insert into tabela values:
+	('Dado1', 'Dado2'),
+	('Dado1', 'Dado2');
+
+Dessa forma ele ira colocar varios dados até que encerre o comando
+
+Os comandos que seguem a regra de manipulação de dados são chamados de 
+DML (Data Manipulation Language):
+
+	INSERT INTO

@@ -8,7 +8,7 @@ tinyint = 1 byte
 
 varchar(l) = uma variavel flexivel que vai ate l caracteres
 
-date = data
+date = data, lembrando que para inserir a data você tem que inserir o 'ano-mês-dia'     2005-11-05
 
 enum('P',) = irá aceitar apenas os valores com paramentros
 
