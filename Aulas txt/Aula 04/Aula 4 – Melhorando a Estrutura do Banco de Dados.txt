@@ -1,0 +1,39 @@
+default CHARSET utf8mb4_general_ci = define o charset padrão como utf8 default collate 
+
+collate utf8mb4_general_ci = define os caracteres padrões como sendo utf9
+
+date = data
+
+enum('p') = enum é uma coleção, você coloca enum e no lugar do P coloca 
+o paramentro do nome, depois da , entre () você pode colocar outro 
+paramentro
+
+decimal = decimal define um numero decimal, pode se passar o paramentro 
+para limitar o numero de caracteres antes e depois da , usando :
+
+	decimal(nt,dv)
+
+	sendo nt = numeros totais e
+	
+	dv = numeros depois da virgula
+	
+	Sendo assim ele só ira aceitar a quantidade de total de nt, sem 
+	aceitar mais do que eles mas com a possibilidade de aceitar 
+	menos. 
+	Dessa forma economizando espaço no banco de dados
+
+Primary key (k) = Define a chave primaria como sendo o elemento 
+informado em k
+
+constrangs são regras para o banco de dados:
+
+	NOT NULL = não pode ser em branco
+	
+	DEFAULT = caso o dado não seja informado será considerado como o 
+	paramentro após a ''
+	
+	AUTO_INCREMENT = Auto incrementa um campo
+
+Na exportação do banco de dados é possivel que você veja o banco de 
+dados com os elementos entre ` ` isso é perfeitamente normal, serve para 
+você informar nomes com espaços, acentuados ect...
