@@ -1,0 +1,16 @@
+bigint = 8 bytes
+
+int = 4 bytes
+
+smallint = 2 bytes
+
+tinyint = 1 byte
+
+varchar(l) = uma variavel flexivel que vai ate l caracteres
+
+date = data
+
+enum('P',) = irá aceitar apenas os valores com paramentros
+
+decimal(tot, dv) = tot ira ter o numero total de numeros, o dv sera 
+quantos numeros após a virgula

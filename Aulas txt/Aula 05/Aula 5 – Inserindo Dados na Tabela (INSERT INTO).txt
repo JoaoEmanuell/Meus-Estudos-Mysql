@@ -1,0 +1,2 @@
+Todo comando que segue a regra do SQL é chamado de DDL, que siginifica 
+Data Defenition Language (Linguagem de definição de dados)
