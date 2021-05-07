@@ -124,3 +124,35 @@ CREATE TABLE IF NOT EXISTS nome () = Cria uma tabela se ela não existir
 DROP TABLE IF EXISTS nome = Apaga a tabela com o nome informado
 
 =================================================
+
+MODIFICAR UMA LINHA DA TABELA:
+
+	UPDATE tabela
+	SET campo = 'Dado'
+	WHERE primary_key = 'key';
+
+MODIFICAR VARIAS LINHAS DA TABELA:
+
+	UPDATE tabela
+	SET campo = 'dado', campo = 'dado'
+	WHERE primary_key = 'key'
+	LIMIT 1;
+
+esse LIMIT serve para definir quantas linhas serão afetadas, evitando 
+que você modifique varias linhas.
+
+REMOVER LINHAS:
+
+	UMA LINHA:
+
+		DELETE FROM tabela
+		WHERE primary_key = 'key';
+
+	TODAS AS LINHAS:
+
+		TRUNCATE TABLE tabela;
+
+		ou
+
+		TRUNCATE tabela;
+=================================================

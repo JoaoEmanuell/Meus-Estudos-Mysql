@@ -1,0 +1,39 @@
+Manipular registros ou Manipular linhas ou manipular tuplas, 
+essecialmente siginificam a mesma coisa.
+
+Tudo que estiver em linha é registro, tudo que estiver em coluna é campo
+
+Para modificar uma linha da tabela você utiliza:
+
+	UPDATE tabela
+	SET campo = 'Dado'
+	WHERE primary_key = 'key';
+	
+Dessa forma ele ira modificar somente a linha especificada
+
+Para modificar mais de uma linha é bastante simples:
+
+	UPDATE tabela
+	SET campo = 'dado', campo = 'dado'
+	WHERE primary_key = 'key'
+	LIMIT 1;
+
+esse LIMIT serve para definir quantas linhas serão afetadas, evitando 
+que você modifique varias linhas.
+
+Removendo uma linha:
+
+Para remover uma linha se usa o comando:
+
+	DELETE FROM tabela
+	WHERE primary_key = 'key';
+
+Apagar todas as linhas:
+
+Para remover todas as linhas de uma tabela, usa-se o comando:
+
+	TRUNCATE TABLE tabela;
+
+	ou
+
+	TRUNCATE tabela;
