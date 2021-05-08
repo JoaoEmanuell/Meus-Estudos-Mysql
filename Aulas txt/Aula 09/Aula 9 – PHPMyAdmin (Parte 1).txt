@@ -1,0 +1,16 @@
+No console do mysql, você pode utilizar todos os comandos que foram 
+aprendidos ate agora.
+
+show databases; Exibe os bancos de dados
+
+status; Exibe o status, em Current database, mostra o banco de dados que 
+está sendo utilizado no momento.
+
+use banco; usa o banco de dados especificado.
+
+show tables; exibe as tabelas.
+
+describe tabela; descreve a tabela desejada.
+
+E eu não consigo usar o phpmyadmin, infelizmente por alguma razão 
+indepdente da solução, ela não funciona :/
