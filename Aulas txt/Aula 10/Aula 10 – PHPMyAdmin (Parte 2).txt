@@ -1,0 +1,26 @@
+Como eu não tenho como utilizar o PHPMyAdmin, eu irei fazer essa aula 
+sem praticar :/
+
+Para criar um novo banco de dados, va na barra latera e clique em new, 
+ou no simbolo da casinha (pagina principal), clica em base de dados.
+
+Coloque o nome do banco de dados, na parte do charset, procure por 
+utf8_general_ci clique em criar.
+
+Como não tem nada na base de dados, ele ira te surgerir criar uma 
+tabela, coloque o nome e coloque o numero de colunas, Dessa forma ele 
+ira criar a tabela, preencha as colunas da forma que você desejar.
+
+O campo "A_I" siginifica auto-incremento
+
+No console mysql, se você utilizar o comando:
+
+show create table tabela;
+
+Ele ira exibir os comandos que foram usados para criar a tabela.
+
+O mesmo vale para ao banco de dados:
+
+show create database banco;
+
+Irar exibir os comandos que forma usados para criar a database.
