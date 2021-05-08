@@ -1,0 +1,54 @@
+Para exportar os dados você irar no workbench;
+
+Server;
+
+Data Export;
+
+Selecionar o banco de dados;
+
+Por padrão todos os elementos dele já vem marcados;
+
+Na parte ao lado do Select Views, existe o DUMP, caso queira selecionar 
+a estrutura e os dados, vá na opção Dump Structure and Data, caso queira 
+exportar somente os dados, vá em Dump Data Only, caso queira somente a 
+estrutura da tabela, vá em Dump Structure Only.
+
+Logo abaixo em Export Options, ele irá ter duas opções.
+
+Export to Dump Project Folder:
+
+	Exporta o projeto dentro de uma pasta
+
+Export to Self-Contained File:
+
+	Exprta o projeto em um arquivo unico
+
+Caso você queria clique no campo " Include Create Schema " isso ira 
+servir para criar já com o comando de criação do banco de dados, dessa 
+forma facilitando a vida.
+
+Depois disso clique em Start Export.
+
+Digite a senha e clique em ok.
+
+Então ele ira criar o arquivo no diretorio:
+
+/home/emanuel/dumps
+
+No caso do meu computador.
+
+Um dump é basicamente um registro de tudo que o usuario fez para o banco 
+de dados chegar no momento atual.
+
+Para importar um dump, você vai em:
+
+	Server
+
+	Data import
+
+	Nessa area, você vai em ' Import from Self-Contained File ' 
+	clica nos três pontinhos no final do caminho, selecione o 
+	arquivo
+
+	Clique em Start Import, coloque a senha.
+
