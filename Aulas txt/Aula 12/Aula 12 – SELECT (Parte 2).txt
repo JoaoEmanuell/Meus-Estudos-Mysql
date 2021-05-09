@@ -1,0 +1,100 @@
+USANDO O OPERADOR LIKE:
+
+    select * from tabela
+    where campo LIKE 'L%'
+
+    Irar selecionar todos os elementos da tabela que o campo tenha a semelhança (operador LIKE), tenha a letra (L) como inicial, o % seria um coringa, a obrigatoriedade seja que começe com L, o que vinher depois seja de L, será selecionado, colocando a palavra NOT antes do like, ele ira selecionar os elementos que não tenham a semelhança com a letra desejada.
+
+WILDCARDS:
+
+    wildcards são formas de seleção especificas:
+
+    SELECIONAR LETRA NO INICIO:
+
+        SELECT * FROM tabela
+        WHERE campo LIKE 'L%'
+
+        Irar selecionar todos os elementos da tabela, que o campo indicado tenha a semelhança e que os registros no inicio tenham a letra L, colocando a palavra NOT antes do like, ele ira selecionar os elementos que não tenham a semelhança com a letra desejada. 
+
+    SELECIONAR LETRA NO FINAL:
+
+        SELECT * FROM tabela
+        WHERE campo LIKE '%L'
+
+        Irar selecionar todos os elementos da tabela, que o campo indicado tenha a semelhança e que os registros no final sejam escritos com L, colocando a palavra NOT antes do like, ele ira selecionar os elementos que não tenham a semelhança com a letra desejada.
+
+    SELECIONAR LETRA ESPECIFICA:
+
+        SELECT * FROM tabela
+        WHERE campo LIKE '%L%'
+
+        Irar selecionar todos os elementos da tabela, que o campo indicado tenha a semelhaça e que os registros contenham a letra L, colocando a palavra NOT antes do like, ele ira selecionar os elementos que não tenham a semelhança com a letra desejada.
+
+    WILDACARD _:
+
+        Servirar para exigir que tenha um caractere
+
+            SELECT * FROM tabela
+            WHERE campo LIKE 'L_'
+
+            Irar selecionar todos os elementos da tabela, que o campo indicado tenha a semelhança e que os registros no inicio tenham a letra L, terminando em qualquer caractere, colocando a palavra NOT antes do like, ele ira selecionar os elementos que não tenham a semelhança com a letra desejada.
+
+DISTINCT:
+
+    O distinct serve para selecionar registros que tenham o mesmo nome:
+
+    SELECT DISTINCT campos FROM gafanhotos
+
+    Irar selecionar os campos da tabela, que contenham o mesmo nome.
+
+FUNÇÕES DE AGREGAÇÃO:
+
+    count = Serve para contar quantos itens tem na tabela:
+
+        select COUNT(campo) from tabela
+
+        Irar verificar o numero de registro da tabela.
+
+    max = Serve para verificar qual é o maior registro
+
+        select max(campo) from tabela;
+
+        Irar verificar qual dos registros indicados no campo, tem o maior valor.
+
+    min = Serve para verificar qual é o menor registro
+
+        select min(campo) from tabela;
+
+        Irar verificar qual dos registros indicados no campo, tem o menor valor.
+    
+    sum = Serve para verificar a soma total dos itens:
+
+        select SUM(campo) from tabela
+
+        Irar verificar a soma de todos os itens do campo especificado.
+
+    avg = Serve para verificar a média dos itens:
+
+        select AVG(campo) from tabela
+
+        Irar verificar a média dos itens do campo.
+
+EXERCICIOS:
+
+    1 = Lista com o nome de todas as garfanhotas;
+
+    2 = Lista com os dados de todos que nasceram entre 01/01/2000 e 31/12/2015
+
+    3 = Lista com o nome de todos os homens que trabalham como Progamadores
+
+    4 = Lista com dados de todas as mulhres que nasceram no Brasil e têm seu nome começado com J
+
+    5 = Lista com o nome e nacionalidade dos homens que têm Silva no nome, não nasceram no Brasil e pesam menos de 100kg
+
+    6 = Maior altura entre os gafanhotos homens que moram no Brasil
+
+    7 = Média de peso dos gafanhotos que moram no Brasil
+
+    8 = Menor peso entre garfanhotos mulheres que nasceram fora do Brasil e entre 01/01/1990 e 31/12/2000
+
+    9 = Quantas gafanhotas mulheres têm mais de 1.90 de altura
