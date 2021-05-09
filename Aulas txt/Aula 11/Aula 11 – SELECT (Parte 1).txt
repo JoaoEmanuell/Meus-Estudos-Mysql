@@ -1,0 +1,47 @@
+SELECT * FROM tabela = seleciona todos os itens de uma tabela, esse 
+comando pode receber diversos paramentros, como veremos nessa aula.
+
+	ORDER BY coluna asc = ira ordenar o campo em ordem cresente, o 
+	asc é opcional, caso coloque mais de uma coluna, ele ira ordenar 
+	por ambas as colunas.
+	
+	ORDER BY coluna DESC = ira ordenar o campo em ordem decresente.
+	
+SELECT campos FROM tabela:
+
+	Irar exibir apenas as colunas indicadas, pode receber os mesmos 
+	paramentros do de cima.
+
+FILTRAR POR LINHAS:
+
+	SELECT campos FROM tabela
+	WHERE campo = 'value' 
+	
+	irar selecionar 
+	apenas os campos que tenham a linha com o valor definido, você 
+	também pode selecionar colunas especificas para filtrar, so 
+	colocar o nome delas no * Você também pode utilizar operadores 
+	relacionais no lugar do igual, dessa forma ele ira filtrar os 
+	elementos de forma ainda mais precisa.
+
+SELECIONANDO INTERVALOS:
+	
+	SELECT campos FROM tabela
+	WHERE campo BETWEEN 'value_ini' AND 'value_fin'
+
+	Irar selecionar os campos da tabela, onde o campo indicado 
+	esteja com o valor entre value_ini e value_fin.
+
+SELECIONANDO VALORES:
+
+	SELECT campos FROM tabela
+	WHERE campo IN ('value', 'value1')
+
+	Irar selecionar os campos da tabela, onde campo o campo indicado tenha os valores inidicados pelo IN
+
+SELECIONANDO COM OPERADORES LOGICOS:
+
+	SELECT campos FROM tabela
+	WHERE campo op 'value' OPL campo op 'value'
+
+	Irar selecionar os campos da tabela, onde os campos indicados obedeçam aos operadores, OPL = operador logico
