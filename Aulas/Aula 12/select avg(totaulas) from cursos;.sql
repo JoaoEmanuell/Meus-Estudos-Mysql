@@ -1,0 +1,1 @@
+select avg(totaulas) from cursos;
