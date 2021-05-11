@@ -87,7 +87,7 @@ EXERCICIOS:
 
     3 = Lista com o nome de todos os homens que trabalham como Progamadores
 
-    4 = Lista com dados de todas as mulhres que nasceram no Brasil e têm seu nome começado com J
+    4 = Lista com dados de todas as mulheres que nasceram no Brasil e têm seu nome começado com J
 
     5 = Lista com o nome e nacionalidade dos homens que têm Silva no nome, não nasceram no Brasil e pesam menos de 100kg
 
@@ -98,3 +98,88 @@ EXERCICIOS:
     8 = Menor peso entre garfanhotos mulheres que nasceram fora do Brasil e entre 01/01/1990 e 31/12/2000
 
     9 = Quantas gafanhotas mulheres têm mais de 1.90 de altura
+
+R1 = 	
+
+    Talita Nascimento	
+    Leila Martins	
+    Letícia Neves	
+    Janaína Couto	
+    Andreia Delfino	
+    Rosana Kunz	
+    Josiane Dutra	
+    Nara Matos	
+    Ana Carolina Mendes	
+    Monique Precivalli	
+    Karine Ribeiro	
+    Jarismar Andrade	
+    Janaina Oliveira	
+    Daniele Moledo	
+    Ana Carolina Hernandes	
+    Bruna Teles	
+    Elaine Nunes	
+    Jucinei Teixeira	
+    Bruna Santos	
+    Rita Pontes	
+    Dayana Dias	
+    Silvana Albuquerque
+
+R2 =
+    8	Carlisson Rosa	Professor	2010-08-01	M	78.22	
+    16	Elvis Schwarz	Dentista	2011-05-07	M	66.69	
+    20	Marcos Dissotti	Empreendedor	2010-01-01	M	53.79	
+    21	Ana Carolina Mendes	Ator	2000-12-15	F	88.30	
+    22	Guilherme de Sousa	Dentista	2001-05-18	M	132.70	
+    23	Bruno Torres	Auxiliar Administrat	2000-01-30	M	44.65	
+    27	Monique Precivalli	Auxiliar Administrat	2013-12-30	F	48.20	
+    32	Roberto Luiz Debarba	Ator	2007-01-09	M	77.44	
+    33	Jarismar Andrade	Dentista	2000-06-23	F	63.70	
+    35	Márcio Mello	Programador	2011-11-20	M	54.11	
+    36	Robson Rodolpho	Auxiliar Administrat	2000-08-08	M	110.10	
+    37	Daniele Moledo	Empreendedor	2006-08-11	F	101.30	
+    39	Neriton Dias	Auxiliar Administrat	2009-10-30	M	48.99	
+    41	Isaias Buscarino	Dentista	2001-01-07	M	99.90	
+    46	Diogo Padilha	Auxiliar Administrat	2000-03-03	M	54.34	
+    49	Silvio Ricardo	Programador	2012-03-12	M	65.99	
+    50	Denilson Barbosa da Silva	Empreendedor	2000-01-08	M	97.30	
+    58	Carlos Camargo	Programador	2005-02-22	M	124.65	
+    59	Philppe Oliveira	Auxiliar Administrat	2000-05-23	M
+
+3 = 
+
+    Emerson Gabriel	
+    Jackson Telles	
+    Allan Silva	
+    Raian Porto	
+    Anderson Rafael	
+    Márcio Mello	
+    André Schmidt	
+    Silvio Ricardo	
+    Andre Santini	
+    Ruan Valente	
+    Carlos Camargo
+
+4 = 
+
+	33	Jarismar Andrade 
+    Dentista 2000-06-23	F 63.70	1.33 Brasil
+
+5 = 
+
+    Herisson Silva	EUA
+
+6 = 
+
+    2.35
+
+7 =
+
+    73.967705
+
+8 = 
+    
+    35.90
+
+9 =
+
+    5
