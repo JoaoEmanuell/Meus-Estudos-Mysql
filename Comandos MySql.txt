@@ -1,3 +1,4 @@
+//Aula 03 e 04
 create database nome; = cria um banco de dados
 
 =================================================
@@ -59,7 +60,7 @@ CONSTANTS:
 	AUTO_INCREMENT = Auto incrementa um campo
 
 =================================================
-
+//Aula 05
 INSERIR DADOS NA TABELA:
 
 	insert into nome_da_tabela
@@ -87,7 +88,7 @@ Ou de forma simplificada:
 	('Dado1', 'Dado2');
 
 =================================================
-
+//Aula 06
 ALTER TABLE tabela = altera a estrutura da tabela, ele por sua vez tem 
 que ser complementado com alguns comandos:
 
@@ -124,7 +125,7 @@ CREATE TABLE IF NOT EXISTS nome () = Cria uma tabela se ela não existir
 DROP TABLE IF EXISTS nome = Apaga a tabela com o nome informado
 
 =================================================
-
+//Aula 07
 MODIFICAR UMA LINHA DA TABELA:
 
 	UPDATE tabela
@@ -157,7 +158,7 @@ REMOVER LINHAS:
 		TRUNCATE tabela;
 
 =================================================
-
+//Aula 08
 Para exportar os dados você irar no workbench;
 
 Server;
@@ -212,4 +213,53 @@ Para importar um dump, você vai em:
 
 	Clique em Start Import, coloque a senha.
 
+=================================================
+//Aula 11
+SELECT * FROM tabela = seleciona toda a tabela, paramentros:
+
+	ORDER BY coluna ASC = ordena a coluna de forma ascendente, caso não coloque nada irar ordenar da mesma maneira
+
+	ORDER BY coluna DESC = ordena a coluna de forma descendente
+
+SELECT campos FROM tabela = seleciona os campos especificados da tabela
+
+SELECT campos FROM tabela
+WHERE campo = 'value' = seleciona os valores da tabela que tenham o valor determinado
+
+SELECT campos FROM tabela
+WHERE campo BETWEEN 'value_ini' AND 'value_fin' = seleciona os valores que estão entre ini e fin
+
+SELECT campos FROM tabela
+WHERE campo IN ('value', 'value1') = seleciona os valores que tenham os valores que estão dentrod e IN
+
+SELECT campos FROM tabela
+WHERE campo op 'value' OPL campo op 'value' = seleciona os valores, utilizando operadores logicos
+=================================================
+//Aula 12
+
+SELECT * FROM tabela
+WHERE campo LIKE 'L%' = seleciona os valores que a primeira letra seja igual a L e as outras venham depois
+
+SELECT * FROM tabela
+WHERE campo LIKE '%L' = seleciona os valores que a ultima letra seja L
+
+SELECT * FROM tabela
+WHERE campo LIKE '%L%' = seleciona os valores que contenham a letra L
+
+	obs: L pode ser so uma letra ou uma palavra
+
+SELECT * FROM tabela
+WHERE campo LIKE 'L_' = seleciona os valores que se assemelham a letra L e que os caracteres sejam qualquer um, se colocar NOT na frente de L, ele ira selecionar todos os registros que não se assemelham.
+
+SELECT DISTINCT campos FROM tabela = seleciona os valores da tabela, que contenham o mesmo nome
+
+SELECT COUNT(campo) FROM tabela = retorna o numero de registros do campo da tabela
+
+SELECT MAX(campo) FROM tabela = retorna o registro com maior valor do campo da tabela
+
+select MIN(campo) FROM tabela = retorna o registro com o menor valor do campo da tabela
+
+select SUM(campo) FROM tabela = retorna a soma dos registros do campo da tabela
+
+select AVG(campo) FROM tabela = retorna a media dos registros do campo da tabela
 =================================================
