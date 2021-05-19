@@ -1,0 +1,78 @@
+O DISTINCT servia para distinguir os registros, se tivesse mais de um registro com o mesmo numero ele iria considerar somente um dos registros.
+
+Já o agrupamento ao inves de recolher um valor, irar recolher todos os valores e agrupar eles se eles forem iguais:
+
+    SELECT campo FROM tabela
+    GROUP BY campo;
+
+No agrupamento você pode utilizar funções de agregação:
+
+    SELECT campo, função FROM tabela
+    GROUP BY campo;
+
+E o WHERE:
+
+    SELECT campo FROM tabela
+    WHERE valor
+    GROUP BY campo;
+
+EXIBINDO AGRUPAMENTO ESPECIFICO:
+
+    SELECT campo FROM tabela
+    GROUP BY campo
+    HAVING condição;
+
+    Essa forma fara com que ele agrupe e exiba somente os que atenderem a condição especificada, o HAVING seria o mesmo que o WHERE, porém ele so serve caso o campo especificado no GROUP BY seja igual ao campo informado nele.
+
+    Nas condições do HAVING você pode colocar comados:
+
+        SELECT campo FROM tabela
+        WHERE condição
+        GROUP BY campo
+        HAVING campo ol (COMANDO);
+
+        ol = operador lógico
+    
+EXERCICIOS:
+
+    1 = Uma lista com as profissões dos gafanhotos e seus respectivos quantitativos
+
+    2 = Quantos gafanhtos homens e quantas mulheres nasceram após 01/01/2005 
+
+    3 = Uma lista com os gafanhotos que nasceram fora do Brasil, mostrando o país de origem e o total de pessoas nascidas lá. 
+    Só nos interessam os países que tiverem mais de 3 gafanhotos com essa nacionalidade.
+
+    4 = Uma lista agrupada pela altura dos gafanhotos, mostrando quantas pessoas pesam mais de 100kg e que estão acima da média de altura de todos os cadastrados.
+
+R1:
+    Auxiliar Administrat	13	
+    Farmacêutico	2	
+    Programador	16	
+    Professor	7	
+    Dentista	7	
+    Ator	6	
+    Empreendedor	7	
+    Médico	3
+
+R2:
+
+    2
+
+R3:
+
+    Portugal	8	
+    EUA	8	
+    Canadá	4	
+    Angola	4
+
+R4:
+
+    2.22	Paulo Narley	1	
+    1.97	Guilherme de Sousa	1	
+    1.87	Paulo Batista	1	
+    2.35	Tiago Ulisses	1	
+    1.76	Robson Rodolpho	1	
+    1.99	Daniele Moledo	1	
+    1.76	Ruan Valente	1	
+    1.33	Carlos Camargo	1	
+    2.19	Philppe Oliveira	1

@@ -263,3 +263,10 @@ select SUM(campo) FROM tabela = retorna a soma dos registros do campo da tabela
 
 select AVG(campo) FROM tabela = retorna a media dos registros do campo da tabela
 =================================================
+//Aula 13
+
+SELECT campo FROM tabela GROUP BY campo = seleciona os campos e agrupa eles pelos campos
+
+SELECT campo FROM tabela GROUP BY campo HAVING condição = seleciona os campos, agrupa ele pelos campo e exibe somente os que atederem a condição especificada
+
+SELECT campo FROM tabela WHERE condição GROUP BY campo HAVING campo ol (COMANDO) = seleciona os campos, agrupa ele pelos campo e exibe somente os que atederem a condição especificada, nesse caso você coloca um comando, como um outro select, dessa forma ele ira obedecer os que tem o comando.
