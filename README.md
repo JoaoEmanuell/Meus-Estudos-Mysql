@@ -33,8 +33,8 @@ Aulas:
 
 - [x] Aula 13 – SELECT (Parte 3)
 
-- [] Aula 14 – Modelo Relacional
+- [ ] Aula 14 – Modelo Relacional
 
-- [] Aula 15 – Chaves Estrangeiras e JOIN
+- [ ] Aula 15 – Chaves Estrangeiras e JOIN
 
-- [] Aula 16 – INNER JOIN com várias tabelas
+- [ ] Aula 16 – INNER JOIN com várias tabelas
