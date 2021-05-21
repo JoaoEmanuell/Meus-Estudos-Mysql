@@ -1,0 +1,93 @@
+Uma entidade para um banco de dados é como 
+se fosse um conteiner que ira receber os 
+dados, os dados são chamados de atributos.
+
+Toda enteidade irar receber os atributos, 
+cada atributo recebe os dados que irão 
+compor os elementos dessa entidade.
+
+Toda entidade pode se relacionar com outra 
+entidade.
+
+O nome que se dar a entidades se 
+relacionando com outras é Diagrama E-R 
+(DER).
+
+Esse relacionamente pode ser descrito da 
+seguinte forma:
+	
+	Entidade relaciona com n entidade
+
+	muitos-para-muitos
+
+Isso é chamado de cardinalidade.
+
+Uma tupla não é obrigada a ter um 
+relacionamento com outra tupla, esse 
+relacionamento é opcional.
+
+Caso a tupla se relacione com apenas uma 
+tupla, podera ser descrito dessa forma:
+
+	Entidade relaciona com entidade
+
+	um-para-um
+
+Caso a tupla se relacione com mais de uma 
+tupla porém a outra tupla se relacione com 
+apenas uma, podera ser descrito dessa forma:
+
+	Entidade relaciona com n entidades
+	
+	Entidade relaciona com entidade
+
+	um-para-muitos
+
+Chave estrangeira é a chave primaria que 
+veio de uma entidade para a outra entidade.
+
+Criar relacionamento entre tabelas nada mais 
+é do que fazer uma troca de chaves entre uma 
+tabela e a outra tabela.
+
+Regras:
+
+UM-PARA-UM:
+
+	Quando for um relacionamento de um-para-um, 
+	você pode verificar se você pode juntar as 
+	tabelas, se sim junte, senão.
+
+	Pegue a chave primaria da outra 
+	entidade e transfira para a entidade 
+	dominante, a chave que foi 
+	transferida ira ser chamada de chave 
+	estrangeira.
+
+UM-PARA-MUITOS:
+
+	Quando for um relacionamento de 
+	um-para-muitos.
+
+	Pegue a chave primaria do lado um e 
+	jogue para o lado muitos, a chave 
+	que foi transferida sera chamada de 
+	chave estrangeira.
+
+MUITOS-PARA-MUITOS:
+
+	Quando for um relacionamento de 
+	muitos-para-muitos.
+
+	A união do relacionamento se torna 
+	uma entidade, essa entidade tem as 
+	suas propias caracteristicas, ela 
+	recebe o n da entidade 1 e o n da 
+	entidade 2, no caminho entre a 
+	unidade 1 é criado um novo 
+	relacionamento, esse relacionamento 
+	é de um para n, sendo o 1 o da 
+	unidade primaria e o n da unidade 
+	central, dessa forma a chave 
+	primaira do lado 1 vai para o lado 
+	muitos com chave estrangeira.
