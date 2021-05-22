@@ -270,3 +270,38 @@ SELECT campo FROM tabela GROUP BY campo = seleciona os campos e agrupa eles pelo
 SELECT campo FROM tabela GROUP BY campo HAVING condição = seleciona os campos, agrupa ele pelos campo e exibe somente os que atederem a condição especificada
 
 SELECT campo FROM tabela WHERE condição GROUP BY campo HAVING campo ol (COMANDO) = seleciona os campos, agrupa ele pelos campo e exibe somente os que atederem a condição especificada, nesse caso você coloca um comando, como um outro select, dessa forma ele ira obedecer os que tem o comando.
+=================================================
+//Aula 15
+
+ALTER TABLE tabela
+ADD COLUM nome_da_coluna tipo = cria uma coluna que sera usada para chave estrangeira
+
+ALTER TABLE tabela
+ADD FOREIGN KEY (coluna)
+REFERENCES tabela(chave_primaria) = cria uma chave estrangeira
+
+UPDATE tabela SET coluna = 
+'id_chave_tabela_2' WHERE ID = 
+'id_chave_tabela_1' = define que a chave primaria da tabela 2 seja conectada a chave estrangeira da tabela 1
+
+SELECT tabela.campo FROM tabela
+JOIN tabela2 
+ON tabela.chave_primaria = 
+tabela2.chave_estrangeira = exibe os campos desejados da tabela 2 onde a chave primaria da tabela 1 seja igual a chave estrangeira da tabela 2, so exibe os campos que contenham uma chave estrangeira definida.
+
+tabela AS apelido = define um apelido para tabela, dessa forma você chama o apelido e não a tabela
+
+SELECT tabela.campo FROM tabela
+OUTER JOIN tabela2
+ON tabela.chave_primaria =
+tabela2.chave_estrangeira = exibe os campos desejados da tabela 2 onde a chave primaria da tabela 1 seja igual a chave estrangeira da tabela 2, exibe todos os campos mesmo que eles não tenham uma chave estrangeira.
+
+SELECT tabela.campo FROM tabela
+LEFT OUTER JOIN tabela2
+ON tabela.chave_primaria =
+tabela2.chave_estrangeira = irar dar prioridade a tabela da esquerda na hora de exibir.
+
+SELECT tabela.campo FROM tabela
+RIGHT OUTER JOIN tabela2
+ON tabela.chave_primaria =
+tabela2.chave_estrangeira = irar dar prioridade a tabela da direita na hora de exibir.

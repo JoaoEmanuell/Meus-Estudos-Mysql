@@ -1,18 +1,33 @@
+//Aula 03 e 04
 create database nome; = cria um banco de dados
+
+=================================================
 
 use nome = Faz com que ele utilize o banco de dados com o nome
 
+=================================================
+
 create table nome ();
+
+=================================================
 
 default CHARSET utf8mb4_general_ci = define o charset padrão como utf8 default collate 
 
+=================================================
+
 collate utf8mb4_general_ci = define os caracteres padrões como sendo utf9
 
+=================================================
+
 date = data
+
+=================================================
 
 enum('p') = enum é uma coleção, você coloca enum e no lugar do P coloca 
 o paramentro do nome, depois da , entre () você pode colocar outro 
 paramentro
+
+=================================================
 
 decimal = decimal define um numero decimal, pode se passar o paramentro 
 para limitar o numero de caracteres antes e depois da , usando :
@@ -28,8 +43,12 @@ para limitar o numero de caracteres antes e depois da , usando :
 	menos. 
 	Dessa forma economizando espaço no banco de dados
 
+=================================================
+
 Primary key (k) = Define a chave primaria como sendo o elemento 
 informado em k
+
+=================================================
 
 CONSTANTS:
 
@@ -39,3 +58,215 @@ CONSTANTS:
 	paramentro após a ''
 	
 	AUTO_INCREMENT = Auto incrementa um campo
+
+=================================================
+//Aula 05
+INSERIR DADOS NA TABELA:
+
+	insert into nome_da_tabela
+	(registro, registro1)
+	values
+	('Dado', 'Dado1');
+
+	Ou
+
+	INSERT INTO nome_da_tabela VALUES
+	('Dado', 'Dado1');
+
+INSERIR VARIOS DADOS:
+
+	insert into tabela
+	(campo, campo1)
+	values
+	('dados', 'dados2'),
+	('dados', 'dados2');
+
+Ou de forma simplificada:
+
+	insert into tabela values:
+	('Dado1', 'Dado2'),
+	('Dado1', 'Dado2');
+
+=================================================
+//Aula 06
+ALTER TABLE tabela = altera a estrutura da tabela, ele por sua vez tem 
+que ser complementado com alguns comandos:
+
+	ADD COLUMN nome tipo_primitivo = Cria uma coluna (no mysql os 
+	campos são chamados de colunas) com o nome e o tipo primitivo, 
+	por padrão a coluna será criada no fim da tabela.
+	
+	DROP COLUMN nome = Apaga uma coluna.
+
+	ADD COLUMN nome tipo_primitivo AFTER nome = Cria uma coluna, com 
+	o nome, tipo primitivo e apos a coluna informado no nome final. 
+
+	ADD COLUMN nome tipo_primitivo FIRST = Cria uma coluna, com o 
+	nome, tipo primitivo e sendo a primeira coluna da tabela.
+
+	MODIFY COLUMN nome novo_tipo_primitivo = Altera o tipo primitivo 
+	mas também pode alterar a constrang da coluna da coluna 
+	desejada.
+	
+	CHANGE COLUMN nome_coluna_antiga nome_nova_coluna tipo primtivo 
+	= altera o nome da coluna, se ela tiver constrangs ou defaults 
+	eles serão perdidos, mas se você colocar eles apos o tipo 
+	primitivo, eles serão mantidos.
+
+	RENAME TO nome = Renomeia a tabela inteira
+
+	ADD PRIMARY KEY(campo) = O campo que foi dito se torna uma chave 
+	primaria
+
+DESC tabela = Descreve a estrutura da tabela.
+
+CREATE TABLE IF NOT EXISTS nome () = Cria uma tabela se ela não existir
+
+DROP TABLE IF EXISTS nome = Apaga a tabela com o nome informado
+
+=================================================
+//Aula 07
+MODIFICAR UMA LINHA DA TABELA:
+
+	UPDATE tabela
+	SET campo = 'Dado'
+	WHERE primary_key = 'key';
+
+MODIFICAR VARIAS LINHAS DA TABELA:
+
+	UPDATE tabela
+	SET campo = 'dado', campo = 'dado'
+	WHERE primary_key = 'key'
+	LIMIT 1;
+
+esse LIMIT serve para definir quantas linhas serão afetadas, evitando 
+que você modifique varias linhas.
+
+REMOVER LINHAS:
+
+	UMA LINHA:
+
+		DELETE FROM tabela
+		WHERE primary_key = 'key';
+
+	TODAS AS LINHAS:
+
+		TRUNCATE TABLE tabela;
+
+		ou
+
+		TRUNCATE tabela;
+
+=================================================
+//Aula 08
+Para exportar os dados você irar no workbench;
+
+Server;
+
+Data Export;
+
+Selecionar o banco de dados;
+
+Por padrão todos os elementos dele já vem marcados;
+
+Na parte ao lado do Select Views, existe o DUMP, caso queira selecionar 
+a estrutura e os dados, vá na opção Dump Structure and Data, caso queira 
+exportar somente os dados, vá em Dump Data Only, caso queira somente a 
+estrutura da tabela, vá em Dump Structure Only.
+
+Logo abaixo em Export Options, ele irá ter duas opções.
+
+Export to Dump Project Folder:
+
+	Exporta o projeto dentro de uma pasta
+
+Export to Self-Contained File:
+
+	Exprta o projeto em um arquivo unico
+
+Caso você queria clique no campo " Include Create Schema " isso ira 
+servir para criar já com o comando de criação do banco de dados, dessa 
+forma facilitando a vida.
+
+Depois disso clique em Start Export.
+
+Digite a senha e clique em ok.
+
+Então ele ira criar o arquivo no diretorio:
+
+/home/emanuel/dumps
+
+No caso do meu computador.
+
+Um dump é basicamente um registro de tudo que o usuario fez para o banco 
+de dados chegar no momento atual.
+
+Para importar um dump, você vai em:
+
+	Server
+
+	Data import
+
+	Nessa area, você vai em ' Import from Self-Contained File ' 
+	clica nos três pontinhos no final do caminho, selecione o 
+	arquivo
+
+	Clique em Start Import, coloque a senha.
+
+=================================================
+//Aula 11
+SELECT * FROM tabela = seleciona toda a tabela, paramentros:
+
+	ORDER BY coluna ASC = ordena a coluna de forma ascendente, caso não coloque nada irar ordenar da mesma maneira
+
+	ORDER BY coluna DESC = ordena a coluna de forma descendente
+
+SELECT campos FROM tabela = seleciona os campos especificados da tabela
+
+SELECT campos FROM tabela
+WHERE campo = 'value' = seleciona os valores da tabela que tenham o valor determinado
+
+SELECT campos FROM tabela
+WHERE campo BETWEEN 'value_ini' AND 'value_fin' = seleciona os valores que estão entre ini e fin
+
+SELECT campos FROM tabela
+WHERE campo IN ('value', 'value1') = seleciona os valores que tenham os valores que estão dentrod e IN
+
+SELECT campos FROM tabela
+WHERE campo op 'value' OPL campo op 'value' = seleciona os valores, utilizando operadores logicos
+=================================================
+//Aula 12
+
+SELECT * FROM tabela
+WHERE campo LIKE 'L%' = seleciona os valores que a primeira letra seja igual a L e as outras venham depois
+
+SELECT * FROM tabela
+WHERE campo LIKE '%L' = seleciona os valores que a ultima letra seja L
+
+SELECT * FROM tabela
+WHERE campo LIKE '%L%' = seleciona os valores que contenham a letra L
+
+	obs: L pode ser so uma letra ou uma palavra
+
+SELECT * FROM tabela
+WHERE campo LIKE 'L_' = seleciona os valores que se assemelham a letra L e que os caracteres sejam qualquer um, se colocar NOT na frente de L, ele ira selecionar todos os registros que não se assemelham.
+
+SELECT DISTINCT campos FROM tabela = seleciona os valores da tabela, que contenham o mesmo nome
+
+SELECT COUNT(campo) FROM tabela = retorna o numero de registros do campo da tabela
+
+SELECT MAX(campo) FROM tabela = retorna o registro com maior valor do campo da tabela
+
+select MIN(campo) FROM tabela = retorna o registro com o menor valor do campo da tabela
+
+select SUM(campo) FROM tabela = retorna a soma dos registros do campo da tabela
+
+select AVG(campo) FROM tabela = retorna a media dos registros do campo da tabela
+=================================================
+//Aula 13
+
+SELECT campo FROM tabela GROUP BY campo = seleciona os campos e agrupa eles pelos campos
+
+SELECT campo FROM tabela GROUP BY campo HAVING condição = seleciona os campos, agrupa ele pelos campo e exibe somente os que atederem a condição especificada
+
+SELECT campo FROM tabela WHERE condição GROUP BY campo HAVING campo ol (COMANDO) = seleciona os campos, agrupa ele pelos campo e exibe somente os que atederem a condição especificada, nesse caso você coloca um comando, como um outro select, dessa forma ele ira obedecer os que tem o comando.

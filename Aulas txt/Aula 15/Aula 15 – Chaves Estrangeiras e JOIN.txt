@@ -1,0 +1,149 @@
+Enginnes são os algoritimos que 
+permitem a criação de tabelas, 
+normalmente a utilizada é a InnoDB, a 
+InnoDB é compativel com Chaves 
+Estrangeiras.
+
+A maior parte das Enginnes antigas 
+utilizavam o MyISAM, o problema do 
+MyISAM é que ele não suporta o ACID, 
+o ACID são 4 regras que fazem uma boa 
+transação acontecer, transação é tudo 
+aquilo que você pede para o banco de 
+dados e ele te retorna uma resposta.
+
+ACID
+
+A = Atomicidade, ou toda a transação 
+é feita ou nada é feito.
+
+C = Consistência, um banco de dados 
+que estava consisente anteriomente, 
+tem que continuar consistente apos a 
+transação.
+
+I = Isolamento, quando eu tenho duas 
+trasações acontecendo paralelamente, 
+as duas tem que ser executadas sem 
+que uma atrapalhe a outra.
+
+D = Durabilidade, uma transação tem 
+que ser duravel, ela tem que durar o 
+tempo que foi necessario.
+
+A chave estrangeira não precisa ter o 
+mesmo nome da chave primaria da outra 
+tabela, mas ela precisa ter o mesmo 
+tipo.
+
+Adicionando a FOREING key:
+
+ALTER TABLE tabela
+ADD COLUM nome_da_coluna tipo;
+
+ALTER TABLE tabela
+ADD FOREIGN KEY (coluna)
+REFERENCES tabela(chave_primaria);
+
+Dessa forma ele ira alterar a tabela, 
+criar uma coluna com o tipo 
+especificado, adicionar uma chave 
+estrangeira a coluna especificada e 
+referencia a chave com a chave 
+primaria da tabela especificada.
+
+FAZENDO A LIGAÇÃO:
+
+UPDATE tabela SET coluna = 
+'id_chave_tabela_2' WHERE ID = 
+'id_chave_tabela_1';
+
+Dessa forma a coluna da chave 
+estrangeira irar receber o id 
+informado da tabela 2.
+
+Por causa do relacionamento entre as 
+tabelas, se eu tentar apagar um 
+determinado campo de uma determinada 
+tabela e esse campo tiver o ligado 
+com outro campo de outra tabela, isso 
+sera negado.
+
+JOIN:
+
+Caso exiba os campos das tabela você 
+irar perceber que a chave estrangeira 
+é apenas um numero, para poder 
+mostrar os campos que você quer da 
+outra tabela você utiliza o comando 
+join:
+
+SELECT tabela.campo FROM tabela
+JOIN tabela2 
+ON tabela.chave_primaria = 
+tabela2.chave_estrangeira;
+
+Dessa forma ele ira selecionar os 
+campos das tabelas especificadas, 
+mostrando primeiro da tabela1, 
+conctando com a tabela2, o on serve 
+para referenciar, sem ele ele iria 
+exibir tudo sem conectar nada, on 
+chave primaria da tabela2 (tabela 
+conectada com o join) seja igual a 
+chave estrangeira da tabela 1 (tabela 
+depois do from).
+
+Note que para especificar a tabela e 
+a coluna você coloca: tabela.coluna, 
+dessa forma ele irar especificar.
+
+Caso você coloque o join sozinho, ele 
+ira interpretar que o JOIN é um INNER 
+JOIN, o INNER JOIN exibe somente os 
+campos que tem a chave estrangeira 
+verdadeira.
+
+APELIDOS DE TABELA:
+
+Servem para se referir a uma tabela 
+de forma espeficia:
+
+tabela AS apelido
+
+Dessa forma ao inves de utilizar o 
+nome da tabela, você utiliza o 
+apelido.
+
+OUTER JOIN:
+
+Outer join irar mostrar todos os 
+campos especificados mesmo se o valor 
+for nulo:
+
+
+SELECT tabela.campo FROM tabela
+OUTER JOIN tabela2
+ON tabela.chave_primaria =
+tabela2.chave_estrangeira;
+
+Porém você precisa informar qual a 
+tabela que ele irar dar preferencia, 
+isso é feito informando LEFT ou 
+RIGHT, a tabela que estiver com a 
+preferencia irar ser mostrada:
+
+SELECT tabela.campo FROM tabela
+LEFT OUTER JOIN tabela2
+ON tabela.chave_primaria =
+tabela2.chave_estrangeira;
+
+Nesse caso ele irar exibir a tabela1
+
+SELECT tabela.campo FROM tabela
+RIGHT OUTER JOIN tabela2
+ON tabela.chave_primaria =
+tabela2.chave_estrangeira;
+
+Nesse caso ele irar exibir a tabela2 
+.
