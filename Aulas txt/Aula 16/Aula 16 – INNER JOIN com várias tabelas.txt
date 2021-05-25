@@ -1,0 +1,41 @@
+Para criar uma relação de tabela de 
+muitos para muitos, primeiro devemos 
+criar uma tabela que irar receber as 
+chaves primarias das tabelas que 
+queremos relacionar.
+
+create table assiste (
+    -> id tipo atributos,
+    -> idtabela1 tipo,
+    -> idtabela2 tipo,
+    -> primary key (id),
+    -> foreign key (idtabela1) 
+    -> references tabela2(primary_key),
+    -> foreign key (idtabela2)
+    -> references tabela2(primary_key)
+    -> ) Default charset = utf8;
+
+Isso fara ele criar uma tabela que 
+terar 2 chaves estrangeiras e servirar 
+de conxeção entre a tabela1 e a tabela2
+
+Para adicionar valores nessa nova 
+tabela se usa o comando insert into:
+
+
+insert into tabelas values
+    -> (default,'primary_key_tabela1',
+	'primary_key_tabela2');
+
+Para usar o join entre as duas tabelas 
+você utiliza o seguinte:
+
+select campos from tabela apelido
+join tabela_conexão apelido 
+on tabela1.primary_key = conexão.foreing_key_tabela1 
+join tabela2 apelido 
+on conexão.foreing_key_tabela2 = tabela2.primary_key;
+
+Dessa forma ele irar fazer um join usando a 
+tabela de conexão e mostrando os dados de 
+forma organizada.
