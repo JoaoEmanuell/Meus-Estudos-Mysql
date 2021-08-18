@@ -305,3 +305,7 @@ SELECT tabela.campo FROM tabela
 RIGHT OUTER JOIN tabela2
 ON tabela.chave_primaria =
 tabela2.chave_estrangeira = irar dar prioridade a tabela da direita na hora de exibir.
+
+=====================================
+
+drop database `database-name`;
