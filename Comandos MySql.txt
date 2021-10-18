@@ -15,7 +15,7 @@ default CHARSET utf8mb4_general_ci = define o charset padrão como utf8 default 
 
 =================================================
 
-collate utf8mb4_general_ci = define os caracteres padrões como sendo utf9
+collate utf8mb4_general_ci = define os caracteres padrões como sendo utf8
 
 =================================================
 
@@ -67,11 +67,17 @@ INSERIR DADOS NA TABELA:
 	(registro, registro1)
 	values
 	('Dado', 'Dado1');
+	
+	INSERT INTO pessoas (nome, nascimento, sexo, peso, altura, nacionalidade ,proff) VALUES ("Emanuel", "2005/11/05", "M", 47.0, 1.67, "Brasil", "Estudante");
 
 	Ou
 
 	INSERT INTO nome_da_tabela VALUES
 	('Dado', 'Dado1');
+	
+	Exemplo :
+	
+	INSERT INTO pessoas VALUES (id,"Emanuel", "2005/11/05", "M", 47.0, 1.67, "Brasil", "Estudante");
 
 INSERIR VARIOS DADOS:
 
@@ -212,6 +218,16 @@ Para importar um dump, você vai em:
 	arquivo
 
 	Clique em Start Import, coloque a senha.
+
+Pelo terminal :
+	
+    Exportar :
+        
+        mysqldump -u nome_de_usuario -p nome_do_banco_de_dados > nome_do_arquivo.sql;
+        
+    Importar :
+    
+        mysql -u nome_de_usuario -p nome_do_banco_de_dados < nome_do_arquivo.sql;
 
 =================================================
 //Aula 11
