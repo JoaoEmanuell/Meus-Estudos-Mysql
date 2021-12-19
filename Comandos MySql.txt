@@ -11,6 +11,19 @@ create table nome ();
 
 =================================================
 
+Para criar as linhas da tabela você faz da seguinte maneira :
+
+CREATE TABLE IF NOT EXISTS NOME_TABELA (NOME_COLUNA TIPO_PRIMITIVO CONSTRANGS, NOME_COLUNA_2 TIPO_PRIMITIVO CONSTRANGS);
+
+Exemplo :
+
+CREATE TABLE IF NOT EXISTS TEST (ID INT AUTO_INCREMENT PRIMARY KEY,
+NAME VARCHAR(50), 
+PASS VARCHAR(20));
+
+Nesse exemplo criamos uma tabela chamada "TEST" com a primeira coluna chamada ID que é um inteiro que se auto incrementa e é a nossa chave primaria, após isso criamos uma coluna chamada de NAME que é um varchar de 50, isso indica que o nome só vai poder ter até 50 caracteres e logo após isso uma outra coluna chamada PASS que é um varchar de 20 caracteres, isso indica que a pass só pode ter até 20 caracteres.
+=================================================
+
 default CHARSET utf8mb4_general_ci = define o charset padrão como utf8 default collate 
 
 =================================================
